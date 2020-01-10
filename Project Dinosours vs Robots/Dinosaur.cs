@@ -9,59 +9,52 @@ namespace Project_Dinosours_vs_Robots
     class Dinosaur
     {
         // `member variables (HAS A)
-        public double DinoTribe;
-        public double TRex;
-        public double Raptor;
-        public double Bront;
-       
-       
-          // constructor (SPAWNER)
-       
-       
+        public string DinoType;
+        public double DinoHealthBar;
+        public double DinoAttackPower;
+        public double DWeaponDamage;
+        public double DinoEnergy;
+        
+        Weapons weapons;
+        
+        
+      
+        //constructor (SPAWNER)
+       public Dinosaur(string DinoType,double DinoHealthBar, double DinoAttackPower, double DWeaponDamage,double DinoEnergy)
+       {
+          this.DinoType = DinoType;
+          this.DinoHealthBar = DinoHealthBar;
+          this.DinoAttackPower = DinoAttackPower;
+          this.DWeaponDamage = DWeaponDamage;
+          this.DinoEnergy = DinoEnergy;
+          weapons = new Weapons(40,40,40);
 
-        // member methods (CAN DO)
-        public void RunDinoContolor() // master method
+
+          
+
+       }
+             
+
+        //member methods (CAN DO)
+        public void DinoAttack(Robot robot)
         {
-           Console.WriteLine("Choose Your Dino");
-           DinoTribe = Convert.ToDouble(Console.ReadLine());
+             robot.RobotHealthBar -= DinoAttackPower + DWeaponDamage;
 
-            
-
-
-           
-        }
-
-        public void TRexAssultClass()
-        {
-            double TRexHealth = 1000;
-            double TRexAttackPower = 130;
-            double TRexPower = 110;
-
-        }
-
-        public void RaptorClass()
-        {
-            double RapHealth = 140;
-            double RapAttack = 1200:
-            double RapPower
         }
 
         
         
 
-            
-            
 
-        
 
+      
         
-        
-
             
 
         
 
-
+        
+        
 
          
             

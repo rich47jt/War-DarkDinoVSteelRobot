@@ -9,37 +9,34 @@ namespace Project_Dinosours_vs_Robots
     class Robot
     {
         // member variables (HAS A)
-        string Kinght;
-        string Pawn;
-       
-      string Bishop;
+        public double RobotHealthBar;
+        public double RobotAttackPower;
+        public double RoboWeaponDamage;
+        public double RoboEnergy;
+        public string RobotType;
+        public  Weapons weapons;
         
-        
-      public  double HealthBar;
-       double  PowerLevel;
-
-        
-       
+  
 
         // constructor (SPAWNER)
-
+        public Robot(string RobotType, double RobotHealhbar, double RobotAttackPower, double RoboWeaponDamage, double RoboEnergy)
+        {
+            this.RobotHealthBar = RobotHealhbar;
+            this.RobotAttackPower = RobotAttackPower;
+            this.RoboWeaponDamage = RoboWeaponDamage;
+            this.RoboEnergy = RoboEnergy;
+            this.RobotType = RobotType;
+            weapons = new Weapons(40, 40, 40);
+        }
         // member methods (CAN DO)
-        public void RobotContolor() // master method
+        
+        public void RoboAttack(Dinosaur dinosaur)
         {
-            
+            dinosaur.DinoHealthBar -= RobotAttackPower + RoboWeaponDamage;
         }
 
-        public void HealthControlor()
-        {
-            Console.WriteLine("Health 100");
-            HealthBar = Convert.ToDouble(Console.ReadLine());
-        }
+        
 
-        public void PowerControlr()
-        {
-            Console.WriteLine("Power 100");
-            PowerGauge = Convert.ToDouble(Console.ReadLine());
-        }
-
+        
     }
 }

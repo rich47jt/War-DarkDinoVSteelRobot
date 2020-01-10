@@ -1,0 +1,6 @@
+C:\Users\Richards Laptop\Desktop\Projects\Project Dinosours vs Robots\Project Dinosours vs Robots\bin\Debug\Project Dinosours vs Robots.exe.config
+C:\Users\Richards Laptop\Desktop\Projects\Project Dinosours vs Robots\Project Dinosours vs Robots\bin\Debug\Project Dinosours vs Robots.exe
+C:\Users\Richards Laptop\Desktop\Projects\Project Dinosours vs Robots\Project Dinosours vs Robots\bin\Debug\Project Dinosours vs Robots.pdb
+C:\Users\Richards Laptop\Desktop\Projects\Project Dinosours vs Robots\Project Dinosours vs Robots\obj\Debug\Project Dinosours vs Robots.csprojAssemblyReference.cache
+C:\Users\Richards Laptop\Desktop\Projects\Project Dinosours vs Robots\Project Dinosours vs Robots\obj\Debug\Project Dinosours vs Robots.exe
+C:\Users\Richards Laptop\Desktop\Projects\Project Dinosours vs Robots\Project Dinosours vs Robots\obj\Debug\Project Dinosours vs Robots.pdb

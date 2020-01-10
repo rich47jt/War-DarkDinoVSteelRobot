@@ -9,50 +9,30 @@ namespace Project_Dinosours_vs_Robots
     class Weapons
     {
         // member variables (HAS A)
-        double Weapon; 
-        double Sword;
-        double Axe;
-        double Hammer;
-        double AttackPower;
+        
+       public double Sword;
+       public double Axe;
+       public double Hammer;
+        
         
         
 
         // constructor (SPAWNER)
-
-        public void Amory()
+        public Weapons(double Sword, double Axe, double Hammer)
         {
-          
+            this.Sword = Sword;
+            this.Axe = Axe;
+            this.Hammer = Hammer;
+
+
         }
+
+        
         
 
 
         // member methods (CAN DO)
-        public void RunWeaponControlor() // master method
-        {
-            Console.WriteLine("choose Weapons");
-           Weapon  = Convert.ToDouble(Console.ReadLine());
-
-        }
-
-        public void AttackPowerControlorSword()
-        {
-            Console.WriteLine("Sword ATK 55");
-            Sword = Convert.ToDouble(Console.ReadLine());
-        }
-
-        public void AttackContorlAxe()
-        {
-            Console.WriteLine("Axe ATK 54");
-            Axe = Convert.ToDouble(Console.ReadLine());
-
-        }
-
-        public void AttackControlHammer()
-        {
-            Console.WriteLine("Hammer ATK 54");
-            Hammer = Convert.ToDouble(Console.ReadLine());
-
-        }
+       
 
     }
 }

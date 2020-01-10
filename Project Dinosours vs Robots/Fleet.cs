@@ -9,22 +9,29 @@ namespace Project_Dinosours_vs_Robots
     class Fleet
     {
         // member variables (HAS A)
-       
-        string Kinght;
-        string Pawn;
-        string Bishop;
-        public List<Robot> robots;
 
+      public  Robot Knight = new Robot("Knight",26000,60,40,60);
+      public Robot Pawn = new Robot("Pawn",31000,56,40,60);
+      public Robot Bishop = new Robot("Bishop",37000,49,40,60);
+      public List<Robot> Robots;
 
 
         // constructor (SPAWNER)
 
-        // member methods (CAN DO)
-        public void RunRobotFleet() // master method
+        public void FleetRobots()
         {
-            Console.WriteLine("Choose your Robot");
-            Type = Convert.ToDouble(Console.ReadLine());
+          Robots = new List<Robot>();
+            
+
+          Robots.Add( new Robot("Knight",26000,60,40,60));
+          Robots.Add(new Robot("Pawn",31000,56,40,60));
+          Robots.Add( new Robot("Bishop",37000,49,40,60));
         }
+        
+
+
+        // member methods (CAN DO)
+
 
     }
 }

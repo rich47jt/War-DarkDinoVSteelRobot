@@ -10,6 +10,10 @@ namespace Project_Dinosours_vs_Robots
     {
         static void Main(string[] args)
         {
+            Battlefield fight = new Battlefield();
+            
+            Console.ReadLine();
+
         }
     }
 }

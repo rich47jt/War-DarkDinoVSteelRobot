@@ -9,27 +9,79 @@ namespace Project_Dinosours_vs_Robots
     class Battlefield
     {
         // member variables (HAS A)
-        
+        Weapons weapons;
         Herd theHerd;
         Fleet theFleet;
 
+
+
         // constructor (SPAWNER)
-
+        public Battlefield()
+        {
+            this.theFleet = new Fleet();
+            this.theHerd = new Herd();
+            StartBattlefield();
+        }
         // member methods (CAN DO)
-        public void RunBattle() // master method
+
+        public void StartBattlefield() //master method
+
         {
-            theFleet.robots[0].HealthBar -= theHerd.Dinos[0].attack;
-        }
-
-        public void DamageControl()
-        {
-
-        }
-
-        public void AttackControlor()
-        {
-
-        }
+            Console.WriteLine("START");
             
+        }
+
+        public void Battle()
+        {
+           
+
+            
+            while(theHerd.Dinos[0].DinoHealthBar > 0 && theFleet.Robots[0].RobotHealthBar >0)
+            {
+                for (int i = 0; i > theHerd.Dinos.Count; i++)
+                {
+                    theFleet.Robots[i].RoboAttack(theHerd.Dinos[i]);
+                    theHerd.Dinos[i].DinoAttack(theFleet.Robots[i]);
+                }
+            }
+
+                    
+        }
+
+        public bool CheckHealth()
+        {
+
+        }
+
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+    
+
+
     }
+    
 }
