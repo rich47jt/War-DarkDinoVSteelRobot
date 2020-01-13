@@ -9,9 +9,10 @@ namespace Project_Dinosours_vs_Robots
     class Battlefield
     {
         // member variables (HAS A)
-        Weapons weapons;
+        
         Herd theHerd;
         Fleet theFleet;
+        
 
 
 
@@ -21,10 +22,12 @@ namespace Project_Dinosours_vs_Robots
             this.theFleet = new Fleet();
             this.theHerd = new Herd();
             StartBattlefield();
+            Battle();
+            Console.ReadLine();
         }
         // member methods (CAN DO)
 
-        public void StartBattlefield() //master method
+        public void StartBattlefield() 
 
         {
             Console.WriteLine("START");
@@ -33,53 +36,49 @@ namespace Project_Dinosours_vs_Robots
 
         public void Battle()
         {
-           
 
             
-            while(theHerd.Dinos[0].DinoHealthBar > 0 && theFleet.Robots[0].RobotHealthBar >0)
+            
+            while(theHerd.DeadDino != true && theFleet.DeadRobot != true)
+
             {
-                for (int i = 0; i > theHerd.Dinos.Count; i++)
+                
+                
+                for (int i = 0; i < theHerd.Dinos.Count; i++)
                 {
-                    theFleet.Robots[i].RoboAttack(theHerd.Dinos[i]);
-                    theHerd.Dinos[i].DinoAttack(theFleet.Robots[i]);
+                    
+                    theHerd.Dinos[i].DinoAttack(theFleet.Robots[0]);
+                    Console.WriteLine("Attacking");
+                    Console.ReadLine();
+
                 }
+
+                for (int i = 0; i < theFleet.Robots.Count; i++)
+                {
+                    theFleet.Robots[i].RoboAttack(theHerd.Dinos[0]);
+                  
+                    Console.WriteLine("Attacking");
+                    Console.ReadLine();
+
+                }
+
+                    theHerd.UpdateStatusDino();
+                theFleet.UpdateStatusRobot();
+               
+
+      
             }
 
                     
         }
 
-        public bool CheckHealth()
-        {
+      
+         
 
-        }
-
-     
-
+       
+       
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-    
 
 
     }

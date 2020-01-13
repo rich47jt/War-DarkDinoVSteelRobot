@@ -9,20 +9,20 @@ namespace Project_Dinosours_vs_Robots
     class Weapons
     {
         // member variables (HAS A)
-        
-       public double Sword;
-       public double Axe;
-       public double Hammer;
-        
-        
-        
+        public string type;
+        public int damage;
+
+
+
+
+
 
         // constructor (SPAWNER)
-        public Weapons(double Sword, double Axe, double Hammer)
+        public Weapons(string type)
         {
-            this.Sword = Sword;
-            this.Axe = Axe;
-            this.Hammer = Hammer;
+            this.type = type;
+            damage = 40;
+
 
 
         }

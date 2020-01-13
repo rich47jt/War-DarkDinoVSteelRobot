@@ -10,24 +10,27 @@ namespace Project_Dinosours_vs_Robots
     {
         // `member variables (HAS A)
         public string DinoType;
-        public double DinoHealthBar;
+        public int DinoHealthBar;
         public double DinoAttackPower;
-        public double DWeaponDamage;
         public double DinoEnergy;
         
+
         Weapons weapons;
+        
         
         
       
         //constructor (SPAWNER)
-       public Dinosaur(string DinoType,double DinoHealthBar, double DinoAttackPower, double DWeaponDamage,double DinoEnergy)
+       public Dinosaur(string DinoType,int DinoHealthBar, double DinoAttackPower,double DinoEnergy)
        {
-          this.DinoType = DinoType;
-          this.DinoHealthBar = DinoHealthBar;
-          this.DinoAttackPower = DinoAttackPower;
-          this.DWeaponDamage = DWeaponDamage;
-          this.DinoEnergy = DinoEnergy;
-          weapons = new Weapons(40,40,40);
+         this.DinoType = DinoType;
+         this.DinoHealthBar = DinoHealthBar;
+         this.DinoAttackPower = DinoAttackPower;
+         this.DinoEnergy = DinoEnergy;
+         
+
+         weapons = new Weapons("sword");
+          
 
 
           
@@ -38,26 +41,11 @@ namespace Project_Dinosours_vs_Robots
         //member methods (CAN DO)
         public void DinoAttack(Robot robot)
         {
-             robot.RobotHealthBar -= DinoAttackPower + DWeaponDamage;
 
-        }
-
-        
-        
+            robot.RobotHealthBar -= DinoAttackPower + weapons.damage;
 
 
-
-      
-        
-            
-
-        
-
-        
-        
-
-         
-            
+        }   
 
 
 

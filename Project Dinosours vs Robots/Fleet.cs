@@ -10,28 +10,47 @@ namespace Project_Dinosours_vs_Robots
     {
         // member variables (HAS A)
 
-      public  Robot Knight = new Robot("Knight",26000,60,40,60);
-      public Robot Pawn = new Robot("Pawn",31000,56,40,60);
-      public Robot Bishop = new Robot("Bishop",37000,49,40,60);
+      public  Robot Knight = new Robot("Knight",1200,45,60);
+      public Robot Pawn = new Robot("Pawn",1200,45,60);
+      public Robot Bishop = new Robot("Bishop",1200,45,60);
       public List<Robot> Robots;
+        public bool DeadRobot;
 
 
         // constructor (SPAWNER)
 
-        public void FleetRobots()
+        public Fleet()
         {
           Robots = new List<Robot>();
-            
-
-          Robots.Add( new Robot("Knight",26000,60,40,60));
-          Robots.Add(new Robot("Pawn",31000,56,40,60));
-          Robots.Add( new Robot("Bishop",37000,49,40,60));
+          Robots.Add( new Robot("Knight",1200,45,60));
+          Robots.Add(new Robot("Pawn",1200,45,60));
+          Robots.Add( new Robot("Bishop",1200,45,60));
         }
         
 
 
         // member methods (CAN DO)
 
+        public void UpdateStatusRobot()
+        {
+            for (int i = 0; i < Robots.Count; i++)
+            {
+                if (Robots[i].RobotHealthBar <= 0)
+                {
+                    Robots.Remove(Robots[i]);
+                    i--;
+                    Console.WriteLine("Robot Defeated");
+                }
+            }
 
+            
+
+
+
+            if (Robots.Count == 0)
+            {
+                DeadRobot = true;
+            }
+        }
     }
 }
